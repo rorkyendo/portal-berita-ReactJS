@@ -1,6 +1,7 @@
 import {
   HeaderMedia,
-  NavbarMedia
+  NavbarMedia,
+  FooterMedia
 } from './views';
 import React,{ Component } from 'react';
 
@@ -10,6 +11,7 @@ class App extends Component {
       <div>
         <HeaderMedia />
         <NavbarMedia />
+        <FooterMedia />
       </div>
     );
   }

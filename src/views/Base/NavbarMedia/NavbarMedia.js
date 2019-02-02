@@ -1,4 +1,11 @@
 import React,{Component} from 'react';
+import {MediaHeader} from './../HeaderMedia/HeaderMedia';
+
+export const TitleStyle = {
+  fontWeight:'bold',
+  fontSize:'-webkit-xxx-large',
+  paddingTop:'10px'
+}
 
 class NavbarMedia extends Component{
   render()
@@ -6,7 +13,7 @@ class NavbarMedia extends Component{
     const pages = ['Home','Login','Register'];
     const AnchorLinks = pages.map((page, i) => {
        return (
-         <li className={page === "Home" ? "active" : ""}>
+         <li className={page === "Home" ? "active" : ""} key={i}>
            <a href={i === 1 ? "/#"+page : "/"+page}>
              { page }
            </a>
@@ -31,13 +38,6 @@ class NavbarMedia extends Component{
     );
     //--------------------------------------- END OF TOP BAR ------------------------------------------//
 
-    const Title = "Portal Berita";
-    const TitleStyle = {
-      fontWeight:'bold',
-      fontSize:'-webkit-xxx-large',
-      paddingTop:'10px'
-    }
-
     const NavbarLinks = (
       <div className="navbar mega-menu background-navbar" role="navigation">
         <div className="container">
@@ -50,7 +50,7 @@ class NavbarMedia extends Component{
             </button>
             <div className="navbar-brand">
               <a href="/">
-                <h4 style={TitleStyle}>{Title}</h4>
+                <h4 style={ TitleStyle }>{ MediaHeader.title }</h4>
               </a>
             </div>
           </div>

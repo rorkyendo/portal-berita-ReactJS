@@ -1,9 +1,11 @@
 import {
   NavbarMedia,
-  HeaderMedia
+  HeaderMedia,
+  FooterMedia
 } from './Base';
 
 export {
   NavbarMedia,
-  HeaderMedia
+  HeaderMedia,
+  FooterMedia
 };
